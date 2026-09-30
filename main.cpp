@@ -13,7 +13,7 @@ public:
     void setIdNumber(const string& idNumberP);
     string getIdNumber() const;
     bool validateIDNumber(const string& idNumberP) const;
-    void displayIdNumberBreakdown(const string& idNumberP) const;
+    void displayIdNumberBreakdown() const;
 };
 
 
@@ -47,11 +47,11 @@ bool Identity::validateIDNumber(const string& idNumberP) const
 }
 
 // Method to display ID number breakdown
-void Identity::displayIdNumberBreakdown(const string& idNumberP) const
+void Identity::displayIdNumberBreakdown() const
 {
-    string dateOfBirth = idNumberP.substr(0, 6);
-    string gender = idNumberP.substr(6, 4);
-    string citizenStatus = idNumberP.substr(10, 1);
+    string dateOfBirth = idNumber.substr(0, 6);
+    string gender = idNumber.substr(6, 4);
+    string citizenStatus = idNumber.substr(10, 1);
 
     cout << dateOfBirth << ": " << "This is the date of birth of the ID holder" << endl;
 
@@ -98,7 +98,7 @@ int main()
         if (identity.validateIDNumber(idNumber))
         {
             identity.setIdNumber(idNumber);
-            identity.displayIdNumberBreakdown(idNumber);
+            identity.displayIdNumberBreakdown();
             break;
         }
         else
