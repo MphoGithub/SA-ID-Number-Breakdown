@@ -10,15 +10,12 @@ private:
     string idNumber;
 
 public:
-    Identity();
     void setIdNumber(const string& idNumberP);
     string getIdNumber() const;
     bool validateIDNumber(const string& idNumberP) const;
     void displayIdNumberBreakdown(const string& idNumberP) const;
 };
 
-// Constructor definition
-Identity::Identity() {}
 
 // Method to set ID number
 void Identity::setIdNumber(const string& idNumberP)
