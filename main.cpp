@@ -43,6 +43,22 @@ bool Identity::validateIDNumber(const string& idNumberP) const
             return false;
     }
 
+    int month = stoi(idNumberP.substr(2,2));
+    if (month < 1 || month > 12)
+    {
+        return false;
+    }
+    int day = stoi(idNumberP.substr(4,2));
+    if(day < 1 || day > 31)
+    {
+        return false;
+    }
+
+    if(idNumberP[10] != '0' || idNumberP[10] != 1)
+    {
+        return false;
+    }
+
     return true;
 }
 
