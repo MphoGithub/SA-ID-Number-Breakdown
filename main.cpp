@@ -76,7 +76,7 @@ void Identity::displayIdNumberBreakdown() const
     {
         cout << gender << ": " << "This number indicates that the ID holder is female" << endl;
     }
-    else if (genderNum >= 5000 && genderNum <= 9999)
+    else
     {
         cout << gender << ": " << "This number indicates that the ID holder is male" << endl;
     }
