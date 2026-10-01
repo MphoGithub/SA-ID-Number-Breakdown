@@ -54,7 +54,7 @@ bool Identity::validateIDNumber(const string& idNumberP) const
         return false;
     }
 
-    if(idNumberP[10] != '0' && idNumberP[10] != 1)
+    if(idNumberP[10] != '0' && idNumberP[10] != '1')
     {
         return false;
     }
